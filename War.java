@@ -47,7 +47,7 @@ public class War
             } else if(random > 12 && random < 17) {
                 Demon demon = new Demon();
                 army2.add(demon);
-            } else if(random > 16 && random < 20) {
+            } else if(random > 16 && random < 19) {
                 Cyberdemon cyberdemon = new Cyberdemon();
                 army2.add(cyberdemon);
             } else {
