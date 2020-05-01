@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=War
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ War\ here.\r\n\r\n\ @author\ Ryan\ Boehm\r\n\ @version\ 5/1/2020\r\n
+comment1.params=size
+comment1.target=void\ populateWar(int)
+comment2.params=
+comment2.target=void\ war()
+numComments=3

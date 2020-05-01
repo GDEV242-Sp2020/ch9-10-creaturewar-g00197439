@@ -67,4 +67,8 @@ public class Creature
    public int getHp() {
        return hp;
    }
+   
+   public void hit(int damage) {
+       hp = hp - damage;
+    }
 }

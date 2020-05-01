@@ -19,4 +19,6 @@ comment5.text=\r\n\ Returns\ the\ strength\ of\ the\ creature\r\n\ @return\ The\
 comment6.params=
 comment6.target=int\ getHp()
 comment6.text=\r\n\ Returns\ the\ current\ HP\ of\ the\ creature\r\n\ @return\ The\ currernt\ HP\ of\ the\ creature\r\n
-numComments=7
+comment7.params=damage
+comment7.target=void\ hit(int)
+numComments=8
