@@ -1,6 +1,22 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Creature()
+comment0.target=Creature
+comment0.text=\r\n\ The\ Creature\ class\ creates\ a\ creature\ with\ a\ certain\ strength\ and\ HP\r\n\ that\ can\ be\ put\ to\ battle\ against\ another\ creature.\r\n\ \r\n\ @author\ Ryan\ Boehm\r\n\ @version\ 4/6/2020\r\n
 comment1.params=
-comment1.target=int\ damage()
-numComments=2
+comment1.target=Creature()
+comment1.text=\r\n\ Basic\ constructor\ for\ the\ Creature\ class\r\n
+comment2.params=hitPoints\ power
+comment2.target=Creature(int,\ int)
+comment2.text=\r\n\ Constructor\ for\ the\ Creature\ class.\ This\ constructor\ allows\ for\r\n\ unique\ values\ to\ be\ added\ into\ the\ Creature\ rather\ than\ 10.\r\n
+comment3.params=
+comment3.target=int\ damage()
+comment3.text=\r\n\ Returns\ a\ random\ value\ between\ 1\ and\ the\ creature's\ strength\r\n\ @return\ A\ random\ damage\r\n
+comment4.params=
+comment4.target=boolean\ isAlive()
+comment4.text=\r\n\ Checks\ to\ see\ if\ the\ creature\ has\ more\ than\ 0\ hit\ points\r\n\ @return\ True\ if\ creature\ has\ more\ than\ 0\ hit\ points\ and\ false\ otherwise\r\n
+comment5.params=
+comment5.target=int\ getStrength()
+comment5.text=\r\n\ Returns\ the\ strength\ of\ the\ creature\r\n\ @return\ The\ strength\ of\ the\ creature\r\n
+comment6.params=
+comment6.target=int\ getHp()
+comment6.text=\r\n\ Returns\ the\ current\ HP\ of\ the\ creature\r\n\ @return\ The\ currernt\ HP\ of\ the\ creature\r\n
+numComments=7

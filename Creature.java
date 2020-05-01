@@ -1,15 +1,16 @@
 import java.util.Random;
 
 /**
- * Write a description of class Creature here.
+ * The Creature class creates a creature with a certain strength and HP
+ * that can be put to battle against another creature.
  * 
- * @author Ryan Boehm 
+ * @author Ryan Boehm
  * @version 4/6/2020
  */
 public class Creature
 {
-   private int hp;
-   private int strength;
+   public int hp;
+   public int strength;
    private Random r;
    
    /**
@@ -36,7 +37,7 @@ public class Creature
     * @return A random damage
     */
    public int damage() {
-       return r.nextInt(strength) + 1;
+   return r.nextInt(strength) + 1;
    }
    
    /**
