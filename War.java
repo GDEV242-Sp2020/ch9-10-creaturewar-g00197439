@@ -58,29 +58,43 @@ public class War
     }
     
     public void war() {
-        int army1Index;
-        int army2Index;
-        while(army1.size() > 0 && army2.size() > 0) {
-            army1Index = r.nextInt(army1.size());
-            army2Index = r.nextInt(army2.size());
-            while(army1.get(army1Index).isAlive() && army2.get(army2Index).isAlive()) {
-                if(r.nextInt(2) == 0) {
-                    army2.get(army2Index).hit(army1.get(army1Index).damage());
-                    if(army2.get(army2Index).isAlive()) {
-                        army1.get(army1Index).hit(army2.get(army2Index).damage());
-                        if(!(army1.get(army1Index).isAlive())) {
-                            army1.remove(army1Index);
-                        }
+        int army1Index = r.nextInt(army1.size());
+        int army2Index = r.nextInt(army2.size());
+        boolean army1Reset = false;
+        boolean army2Reset = false;
+        while(army1.size() > 0 && army2.size() > 0 && army1.get(army1Index).isAlive() && army2.get(army2Index).isAlive()) {
+            if(r.nextInt(2) == 0) {
+                army2.get(army2Index).hit(army1.get(army1Index).damage());
+                if(army2.get(army2Index).isAlive()) {
+                    army1.get(army1Index).hit(army2.get(army2Index).damage());
+                    if(!(army1.get(army1Index).isAlive())) {
+                        army1.remove(army1Index);
+                        army1Reset = true;
                     }
                 } else {
-                    army1.get(army1Index).hit(army2.get(army2Index).damage());
-                    if(army1.get(army1Index).isAlive()) {
-                        army2.get(army2Index).hit(army1.get(army1Index).damage());
-                        if(!(army2.get(army2Index).isAlive())) {
-                            army2.remove(army2Index);
-                        }
-                    }
+                    army2.remove(army2Index);
+                    army2Reset = true;
                 }
+            } else {
+                army1.get(army1Index).hit(army2.get(army2Index).damage());
+                if(army1.get(army1Index).isAlive()) {
+                    army2.get(army2Index).hit(army1.get(army1Index).damage());
+                    if(!(army2.get(army2Index).isAlive())) {
+                        army2.remove(army2Index);
+                        army2Reset = true;
+                    }
+                } else {
+                    army1.remove(army1Index);
+                    army1Reset = true;
+                }
+            }
+            if(army1Reset && army1.size() > 0) {
+                army1Index = r.nextInt(army1.size());
+                army1Reset = false;
+            }
+            if(army2Reset && army2.size() > 0) {
+                army2Index = r.nextInt(army2.size());
+                army2Reset = false;
             }
         }
         if(army1.size() != 0) {
